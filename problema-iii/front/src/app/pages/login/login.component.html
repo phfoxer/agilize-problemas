@@ -1,0 +1,11 @@
+<form novalidate (ngSubmit)="onSubmit()" class="form-signin">
+  <div class="form-label-group">
+    <input [(ngModel)]="user.email" name="username" type="text" id="usernameLabel" class="form-control" placeholder="Informe o usuário" required autofocus>
+    <label for="usernameLabel">Usuário</label>
+  </div>
+  <div class="form-label-group">
+    <input [(ngModel)]="user.password" name="password" type="password" id="passwordeLabel" class="form-control" placeholder="Senha" required>
+    <label for="passwordeLabel">Senha</label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+</form>

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">CEP's cadastrados</a>
+  <a class="btn btn-primary my-2 my-sm-0  col-md-2 col-sm-12" routerLink="/page/home">Nova consulta</a>
+</nav>
+
+<div class="card mt-5" *ngIf="items.length === 0">
+  <div class="card-body text-center">
+    Não há registros.
+  </div>
+</div>
+
+<table *ngIf="items.length > 0" class="table table-striped  mt-5">
+  <thead>
+    <tr>
+      <th scope="col">CEP</th>
+      <th scope="col">Localidade</th>
+      <th scope="col">Logradouro</th>
+      <th scope="col">Bairro</th>
+      <th scope="col">UF</th>
+      <th scope="col">Complemento</th>
+      <th scope="col">GIA</th>
+      <th scope="col">IBGE</th>
+      <th scope="col">Unidade</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.cep}}</td>
+      <td>{{item.localidade}}</td>
+      <td>{{item.logradouro}}</td>
+      <td>{{item.bairro}}</td>
+      <td>{{item.uf}}</td>
+      <td>{{item.complemento}}</td>
+      <td>{{item.gia}}</td>
+      <td>{{item.ibge}}</td>
+      <td>{{item.unidade}}</td>
+    </tr>
+  </tbody>
+</table>
