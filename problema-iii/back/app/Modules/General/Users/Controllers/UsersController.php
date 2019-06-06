@@ -17,7 +17,7 @@ class UsersController extends Controller
 
     public function login(Request $request){
   
-        $user = Users::where(['email'=>$request->email,'password'=>bcrypt($request->password)])->first();
+        $user = Users::where(['email'=>$request->email,'password'=>sha1($request->password)])->first();
         try {
             $token = ($user) ? JWTAuth::fromUser($user) : false;
             if ($token) {
