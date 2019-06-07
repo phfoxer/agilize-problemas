@@ -10,7 +10,7 @@ Dentro do diretório /problema_ii , abra o terminal de sua preferência e execut
     php -S localhost:8080
 Caso não tenha o php no seu path pode utilizar ferramentas online como o [http://phptester.net/](http://phptester.net/)
 
-# Problema II
+# Problema III
 
 ## Na aplicação de Back End
 Adicione um banco de sua preferência ao .env
